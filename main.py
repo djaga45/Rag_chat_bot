@@ -10,7 +10,7 @@ import os
 import tempfile
 
 st.set_page_config(page_title="RAG Chatbot", layout="wide")
-st.title("🤖 RAG Chatbot")
+st.title("RAG Chatbot")
 st.markdown("**Upload your PDF or DOCX file and start chatting**")
 
 uploaded_file = st.file_uploader("Upload PDF or DOCX", type=["pdf", "docx"])
@@ -30,7 +30,7 @@ if uploaded_file is not None:
             docs = loader.load()
 
             if not docs or not docs[0].page_content.strip():
-                st.error("❌ Could not extract text from the document.")
+                st.error(" Could not extract text from the document.")
             else:
                 text_splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
                 chunks = text_splitter.split_documents(docs)
@@ -39,9 +39,9 @@ if uploaded_file is not None:
                 embeddings = OllamaEmbeddings(model="nomic-embed-text")
                 Chroma.from_documents(chunks, embeddings, persist_directory="./chroma_db")
 
-                st.success(f"✅ Document processed successfully! ({len(chunks)} chunks)")
+                st.success(f"Document processed successfully! ({len(chunks)} chunks)")
         except Exception as e:
-            st.error(f"❌ Error: {str(e)}")
+            st.error(f"Error: {str(e)}")
         finally:
             if os.path.exists(temp_path):
                 os.unlink(temp_path)
