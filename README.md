@@ -2,7 +2,7 @@
 | Component          | Technology                     |
 |--------------------|--------------------------------|
 | Framework          | LangChain + Streamlit          |
-| LLM                | deepseek-r1:8b (via Ollama)    |
+| LLM                | deepseek local Model
 | Embeddings         | nomic-embed-text               |
 | Vector Database    | ChromaDB                       |
 | Text Splitting     | RecursiveCharacterTextSplitter |
