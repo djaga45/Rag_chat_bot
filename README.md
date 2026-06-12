@@ -3,7 +3,7 @@
 |--------------------|--------------------------------|
 | Framework          | LangChain + Streamlit          |
 | LLM                | deepseek local Model
-| Embeddings         | nomic-embed-text               |
+| Embeddings         | Dense retrival                 |
 | Vector Database    | ChromaDB                       |
 | Text Splitting     | RecursiveCharacterTextSplitter |
 | Document Loading   | PyPDFLoader + Docx2txtLoader   |
