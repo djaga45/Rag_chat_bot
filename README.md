@@ -1,11 +1,3 @@
-rag-chatbot/
-├── app.py
-├── requirements.txt
-├── .gitignore
-├── README.md
-└── chroma_db/      
-
-
 
 ## Project Preview
 
