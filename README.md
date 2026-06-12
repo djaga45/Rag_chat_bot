@@ -1,4 +1,31 @@
 
+| Component          | Technology                     |
+|--------------------|--------------------------------|
+| Framework          | LangChain + Streamlit          |
+| LLM                | deepseek-r1:8b (via Ollama)    |
+| Embeddings         | nomic-embed-text               |
+| Vector Database    | ChromaDB                       |
+| Text Splitting     | RecursiveCharacterTextSplitter |
+| Document Loading   | PyPDFLoader + Docx2txtLoader   |
+
+
+
+## 2. Create virtual environment & install dependencies BasH
+
+python -m venv venv
+venv\Scripts\activate          # Windows
+# source venv/bin/activate     # Mac/Linux
+
+pip install -r requirements.txt
+
+## 3. Install Ollama models
+ollama pull deepseek-r1:8b
+ollama pull nomic-embed-text
+
+## 4. Run the application
+streamlit run app.py
+
+
 ## Project Preview
 
 1)User Uploads PDF/DOCX 
@@ -16,3 +43,6 @@
 7)LLM (deepseek-r1:8b) + Prompt
         
 8)Final Answer
+
+
+
